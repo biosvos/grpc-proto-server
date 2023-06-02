@@ -1,0 +1,22 @@
+@startuml
+
+class Handler
+class Gateway
+class Proto
+class Main
+
+Proto <-- Handler
+Proto <-- Gateway
+
+Handler <-- Main
+Gateway <-- Main
+
+note right of Handler
+    request handling
+end note
+
+note right of Gateway
+    grpc와 rest api간 변환을 담당한다.
+end note
+
+@enduml

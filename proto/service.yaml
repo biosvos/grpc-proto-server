@@ -1,0 +1,8 @@
+type: google.api.Service
+config_version: 3
+title: 'greeter api'
+
+http:
+  rules:
+    - selector: Greeter.Hello
+      get: '/Hello'
