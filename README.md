@@ -10,10 +10,10 @@ go install github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway@latest
 
 ```bash
 protoc \
-  --go_out=. --go_opt=paths=source_relative \
-  --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+  --go_out=. \
+  --go-grpc_out=. \
   --grpc-gateway_opt=logtostderr=true \
-  --grpc-gateway_out=. --grpc-gateway_opt=paths=source_relative \
+  --grpc-gateway_out=. \
   --grpc-gateway_opt=grpc_api_configuration=proto/service.yaml \
   proto/greeter.proto
 ```
